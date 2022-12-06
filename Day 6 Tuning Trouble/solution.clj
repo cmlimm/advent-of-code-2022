@@ -7,13 +7,13 @@
 (defn find-marker
   [length-distinct]
   (->>
-	(slurp "input.in")
-	(split-in-letters)
-	(partition length-distinct 1)
-	(map #(apply distinct? %))
-	(take-while not)
-	(count)
-	(+ length-distinct)))
+    (slurp "input.in")
+    (split-in-letters)
+    (partition length-distinct 1)
+    (map #(apply distinct? %))
+    (take-while not)
+    (count)
+    (+ length-distinct)))
 
 ; part 1
 ; (find-marker 4)
